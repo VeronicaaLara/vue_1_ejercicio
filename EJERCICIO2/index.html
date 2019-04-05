@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 1</title>
+</head>
+<body>
+
+	<div id="app">
+
+
+		
+		<h1 v-show ="name" v-if = "gender =='masculino'" >Hola, señor {{name}} </h1>
+		<h1 v-show ="name" v-if = "gender =='femenino'"> Hola, señora {{name}} </h1>
+
+
+		
+		<h3 v-if ="gender =='masculino' || gender =='femenino'">  </h3>
+		<h3 v-else ="!gender"> Introduce un género válido, humano. </h3>
+		<p>{{gender}}</p>
+
+		<input type="text" v-model="gender">
+
+
+
+		<h3 v-show ="message">  </h3>
+		<p>{{message}}</p>
+
+		<input type="text" v-model="name">
+
+
+		
+	</div>
+
+
+	
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+<script>
+	
+	let data = {message: "Introduce tu nombre:", name: "", gender: "Introduce tu sexo:"}
+
+
+	new Vue({
+		el: '#app',
+		data: data,
+	});
+	
+
+</script>
+</html>

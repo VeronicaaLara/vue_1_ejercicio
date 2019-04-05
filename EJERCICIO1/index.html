@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EJERCICIO 1</title>
+</head>
+<body>
+
+	<div id="app">
+		
+		<h1 v-show ="name"> Hello, {{name}} </h1>
+
+		<h1 v-else ="message"> Enter your message </h1>
+		<p>{{message}}</p>
+
+		<input type="text" v-model="name">
+	</div>
+
+
+	
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
+<script>
+	
+	let data = {message: "Enter your name:", name:""}
+
+
+	new Vue({
+		el: '#app',
+		data: data,
+	});
+	
+
+</script>
+</html>
